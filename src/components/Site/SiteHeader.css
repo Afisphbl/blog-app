@@ -1,0 +1,60 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 12, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.brand span {
+  background: linear-gradient(90deg, #fff, #9499ad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.top-nav-link {
+  color: var(--txt-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.top-nav-link:hover,
+.top-nav-link-active {
+  color: var(--txt-main);
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0 20px;
+  }
+
+  .top-nav {
+    display: none;
+  }
+}

@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  animation: fade-in 0.4s var(--transition-std);
+}
+
+.section-block {
+  margin-top: 60px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+.section-head h2 {
+  font-size: 1.8rem;
+}
+
+.badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
+  background: var(--acc-blue-soft);
+  color: var(--acc-blue);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.badge.subtle {
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
+.icon-btn {
+  color: var(--txt-muted);
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s var(--transition-std);
+}
+
+.icon-btn:hover {
+  background: var(--bg-secondary);
+  color: var(--txt-main);
+}
+
+.cta-btn {
+  background: var(--acc-blue);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: var(--radius-std);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(19, 146, 236, 0.4);
+}
+
+.ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border-subtle);
+  padding: 12px 28px;
+  border-radius: var(--radius-std);
+  font-weight: 600;
+}
+
+.ghost-btn:hover {
+  background: var(--bg-secondary);
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--acc-blue);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.read-more-btn:hover {
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .page-shell {
+    padding: 28px 16px;
+  }
+
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}
+
+@keyframes fade-in {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(4px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }

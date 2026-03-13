@@ -1,0 +1,12 @@
+.centered {
+  text-align: center;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+  align-content: center;
+  min-height: 60vh;
+}
+
+.centered p {
+  color: var(--txt-muted);
+}
