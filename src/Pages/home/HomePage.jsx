@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 // import ArticleCard from "../components/ArticleCard";
-// import { homeLatestArticles } from "../data/blogData";
+import { homeLatestArticles } from "../../Data/blogData";
 import "./HomePage.css";
 
 function HomePage() {

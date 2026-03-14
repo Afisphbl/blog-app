@@ -1,6 +1,6 @@
 import { Grid3x3, Rocket } from "lucide-react";
 // import ArticleCard from "../components/ArticleCard";
-// import { categoryPosts } from "../data/blogData";
+import { categoryPosts } from "../../Data/blogData";
 import "./CategoryPage.css";
 
 function CategoryPage() {

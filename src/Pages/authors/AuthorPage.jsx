@@ -6,7 +6,7 @@ import {
   Linkedin,
 } from "lucide-react";
 // import ArticleCard from "../components/ArticleCard";
-// import { authorPosts } from "../data/blogData";
+import { authorPosts } from "../../Data/blogData";
 import "./AuthorPage.css";
 
 function AuthorPage() {
