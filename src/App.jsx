@@ -6,6 +6,7 @@ import HomePage from "./Pages/home/HomePage";
 import AuthorPage from "./Pages/authors/AuthorPage";
 import CategoryPage from "./Pages/category/CategoryPage";
 import PostDetailsPage from "./Pages/post-details/PostDetailsPage";
+import NotFoundPage from "./Pages/notFound/NotFoundPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/authors/:authorSlug" element={<AuthorPage />} />
             <Route path="/categories" element={<CategoryPage />} />
             <Route path="/blog/:postSlug" element={<PostDetailsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <SiteHeader />
         </main>

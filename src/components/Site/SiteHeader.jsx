@@ -1,30 +1,39 @@
-import { Bell, Search, SquarePen, UserCircle } from "lucide-react";
+import { PenSquare, Search, Bell, UserCircle2 } from "lucide-react";
+import { NavLink, Link } from "react-router-dom";
+import { navigationLinks } from "../../Data/blogData";
 import "./SiteHeader.css";
 
 function SiteHeader() {
   return (
     <header className="site-header">
-      <div className="brand">
-        <SquarePen size={24} />
+      <Link to="/" className="brand">
+        <PenSquare size={22} color="var(--acc-blue)" />
         <span>Blog Explorer</span>
-      </div>
+      </Link>
 
-      <div className="top-nav">
-        <span className="top-nav-link">Home</span>
-        <span className="top-nav-link">Category</span>
-        <span className="top-nav-link">Authors</span>
-        <span className="top-nav-link">Latest</span>
-      </div>
+      <nav className="top-nav" aria-label="Primary navigation">
+        {navigationLinks.map((link) => (
+          <NavLink
+            key={link.to + link.label}
+            to={link.to}
+            className={({ isActive }) =>
+              isActive ? "top-nav-link top-nav-link-active" : "top-nav-link"
+            }
+          >
+            {link.label}
+          </NavLink>
+        ))}
+      </nav>
 
-      <div className="header-actions">
-        <button className="icon-btn">
-          <Search size={20} />
+      <div className="header-actions" aria-label="Header actions">
+        <button className="icon-btn" aria-label="Search">
+          <Search size={18} />
         </button>
-        <button className="icon-btn">
-          <Bell size={20} />
+        <button className="icon-btn" aria-label="Notifications">
+          <Bell size={18} />
         </button>
-        <button className="icon-btn">
-          <UserCircle size={20} />
+        <button className="icon-btn" aria-label="Account">
+          <UserCircle2 size={20} />
         </button>
       </div>
     </header>
