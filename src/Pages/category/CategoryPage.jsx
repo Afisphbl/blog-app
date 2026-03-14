@@ -1,5 +1,5 @@
 import { Grid3x3, Rocket } from "lucide-react";
-// import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../../components/Article/ArticleCard";
 import { categoryPosts } from "../../Data/blogData";
 import "./CategoryPage.css";
 
@@ -26,9 +26,9 @@ function CategoryPage() {
           </div>
         </div>
         <div className="article-grid">
-          {/* {categoryPosts.map((post) => (
+          {categoryPosts.map((post) => (
             <ArticleCard key={post.title} article={post} />
-          ))} */}
+          ))}
         </div>
       </section>
     </main>

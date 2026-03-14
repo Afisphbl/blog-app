@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
-// import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../../components/Article/ArticleCard";
 import { homeLatestArticles } from "../../Data/blogData";
 import "./HomePage.css";
 
@@ -35,11 +35,11 @@ function HomePage() {
             See all articles <ArrowRight size={14} />
           </Link>
         </div>
-        {/* <div className="article-grid"> */}
-        {/* {homeLatestArticles.map((article) => (
+        <div className="article-grid">
+          {homeLatestArticles.map((article) => (
             <ArticleCard key={article.slug} article={article} />
-          ))} */}
-        {/* </div> */}
+          ))}
+        </div>
       </section>
     </main>
   );

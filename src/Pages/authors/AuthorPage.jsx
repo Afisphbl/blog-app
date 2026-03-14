@@ -5,7 +5,7 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
-// import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../../components/Article/ArticleCard";
 import { authorPosts } from "../../Data/blogData";
 import "./AuthorPage.css";
 
@@ -50,9 +50,9 @@ function AuthorPage() {
           </div>
         </div>
         <div className="article-grid">
-          {/* {authorPosts.map((post) => (
+          {authorPosts.map((post) => (
             <ArticleCard key={post.title} article={post} />
-          ))} */}
+          ))}
         </div>
       </section>
     </main>
