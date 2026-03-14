@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import "./App.css";
 import SiteHeader from "./components/Site/SiteHeader";
 import HomePage from "./Pages/home/HomePage";
+import AuthorPage from "./Pages/authors/AuthorPage";
 import CategoryPage from "./Pages/category/CategoryPage";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <main className="page-shell">
           <Routes>
             <Route index element={<HomePage />} />
+            <Route path="/authors/:authorSlug" element={<AuthorPage />} />
             <Route path="/categories" element={<CategoryPage />} />
           </Routes>
           <SiteHeader />
